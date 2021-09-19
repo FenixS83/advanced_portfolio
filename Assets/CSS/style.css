@@ -108,18 +108,33 @@ article h2 {
 }
 
 article p {
-    padding-left: 20px;
+    padding-left: 30px;
     padding-top: 20px;
 }
 
+portal {
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    
+}
+
 .surf {
-    height: 20vw;
+    width: 73vw;
+    height: 30vw;
+    position: absolute;
+    background-image: url("/advanced_portfolio/Assets/Images/ocean_surf.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid var(--second);
+
 }
 
 .surf img {
+    width: fit-content;
     border: 2px solid;
-    width: 74vw;
-    height: max 20vw;
     margin-left: 20px;
     align-items: center;
 }
