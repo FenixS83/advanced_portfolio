@@ -1,37 +1,50 @@
+/* Stylesheet for sample portfolio */
+
 * {
     box-sizing: border-box;
     text-decoration: none;
 }
 
-
+/* Primary color and styles */
 :root {
     --first: rgba(68, 88, 119, 1);
     --second: rgba(146, 204, 206, 1);
     --third: rgba(49,52, 61, 1);
-}
 
-h1 {
-    margin: 0;
+    --primary: rgba(121,82,125);
+    --secondary:rgb(240,121,82);
+    --tertiary: rgb(240,121,82);
+    --dark:rgba(28,29,33,1);
+    --light: rgba(238, 238, 247,1);
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, Sans-serif;
+    color: var(--primary);
+    background-color: var(--light);
+    line-height: 1.5;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+article p {
+    margin: 0;
+}
+
+/* Header items and styling */
 header {
+    padding: 15px 6% 15px 0;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 15px;
+    flex-wrap: wrap;
     align-items: center;
     background-color: var(--third);
-    margin-bottom: 0;
-    padding-left: 0;
-    height: 10vw;
-    text-align: right;
+    box-shadow: 0 5px 35px var(--first);
 }
 
 header h1 {
@@ -66,6 +79,7 @@ nav a:hover {
     color: var(--primary);
 }
 
+/* Hero Banner content */
 .hero-banner {
     background-image: url("/Assets/Images/wood_fence.jpeg");
     background-color: var(--first);
@@ -76,6 +90,65 @@ nav a:hover {
     background-size: cover;
     margin-top: 0;
 }
+
+/* Main content */
+
+main {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-division {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.page-divition > h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 
+}
+
+article h2 {
+    height: inherit;
+    width: 20vw;
+    padding-left: 10vw;
+    border-right: 3px solid var(--third);
+    padding-right: 10px;
+    font-size: 32px;
+    text-align: right;
+    position: relative;
+    overflow: auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 div h2 {
     position: absolute;
@@ -103,24 +176,6 @@ article {
     position: relative;
 }
 
-article h2 {
-    height: inherit;
-    width: 20vw;
-    padding-left: 10vw;
-    border-right: 3px solid var(--third);
-    padding-right: 10px;
-    font-size: 32px;
-    text-align: right;
-    position: relative;
-    overflow: auto;
-
-}
-
-article p {
-    padding-top: 20px;
-    position: absolute;
-    left: 22vw;
-}
 
 object {
     margin: 5px;;
@@ -145,13 +200,14 @@ object {
     width: 73vw;
     height: 30vw;
     position: absolute;
-    background-image: url("/Assets/Images/ocean_surf.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     border: 3px solid var(--second);
     margin: 3px;
     order: 0;
+    background-image: url("/Assets/Images/ocean_surf.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+   
 
 h3 { 
     position: absolute;
@@ -249,7 +305,7 @@ address {
 
 footer a {
     position: relative;
-
+    margin-bottom: 3.6vw;
     text-decoration: none;
     margin-left: 6vw;
     margin-right: 1vw;
@@ -260,10 +316,10 @@ footer a {
     background-image: linear-gradient(270deg, var(--second) 0%, var(--second) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
-    background-position: bottom center;
+    background-position: bottom;
 }
 
 footer a:hover {
-    background-size: 100% 100%;
+    background-size: 100% 105%;
     color: var(--primary);
 }
