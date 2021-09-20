@@ -107,7 +107,7 @@ article h2 {
     height: inherit;
     width: 20vw;
     padding-left: 10vw;
-    border: 3px solid var(--third);
+    border-right: 3px solid var(--third);
     padding-right: 10px;
     font-size: 32px;
     text-align: right;
@@ -132,8 +132,8 @@ object {
     justify-content: flex-start;
     align-items: flex-start;
     position: absolute;
-    left: 22vw;
-    left: 280px;
+    left: 20vw;
+    top: 2vw;
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 30px;
@@ -174,7 +174,7 @@ h4 {
 }
 
 .work {
-    height: 100%;
+    height: 53vw;
 }
 
 .led {
@@ -232,30 +232,35 @@ h4 {
     order: 4;
 }
 
-footer{ 
+footer { 
+    position: relative;
     flex-grow: 0;
     align-items: flex-end;
     bottom: 0;
     width: 100%;
     
 }
+
+address {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
 footer a {
-    position:relative;
-    justify-content: center;
+    position: relative;
 
     text-decoration: none;
-    margin-left: 25px;
-    padding-left: 30px;
+    margin-left: 6vw;
+    margin-right: 1vw;
+    margin-top: 3vw;
     color: var(--second);
     transition: all 0.25s ease-in;
-    font-size: 1.4rem;
-    text-align: center;
+    font-size: 1.2rem;
     background-image: linear-gradient(270deg, var(--second) 0%, var(--second) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: bottom center;
-    transition: all 0.25s ease-in;
-    font-size: 1rem;
 }
 
 footer a:hover {
