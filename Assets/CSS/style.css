@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     text-decoration: none;
+    color: var(--third);
 }
 
 
@@ -77,6 +78,14 @@ nav a:hover {
     margin-top: 0;
 }
 
+.hero-banner img {
+    position: absolute;
+    right: 110px;
+    top: 20px;
+    height: 185px;
+    border-radius: 60px;
+}
+
 div h2 {
     position: absolute;
     right: 50px;
@@ -117,9 +126,15 @@ article h2 {
 }
 
 article p {
+    height: 13vw;
     padding-top: 20px;
     position: absolute;
     left: 22vw;
+}
+
+.me {
+    margin-bottom: 20px;
+    height: 12vw;
 }
 
 object {
@@ -139,6 +154,7 @@ object {
     padding-left: 30px;
     
 }
+
 
 .surf {
     float: right;
@@ -161,13 +177,18 @@ h3 {
     height: 60px;
     color: var(--third);
     background-color: var(--second);
-    padding: 8px;
+    padding: 10px;
     font-size: 25px;
     align-items: center;
     text-align: center;
     line-height: 50%;
     text-align: left;
 
+}
+
+h3 span {
+    font-size: 13px;
+    line-height: 3;
 }
 
 h4 {
@@ -271,6 +292,8 @@ footer a:hover {
 
 
 @media screen and (max-width: 980px) {
+
+
     header {
         padding: 0 0 10px 0;
         justify-content: center;
@@ -288,9 +311,14 @@ footer a:hover {
         justify-content: center;
     }
 
-    article > h2,
-    article > object {
-        flex: 0 0 1005;
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    article  h2,
+    article  object {
+        flex: 0 0 100%;
     }
 
     article > h2 {
@@ -318,6 +346,12 @@ footer a:hover {
 /* Max Width 768px */
 
 @media screen and (max-width: 768px) {
+    * {
+        display: block;
+        flex-direction: column wrap;
+    }
+
+
     object, object:first-child {
         grid-column: 1/-1;
     }
