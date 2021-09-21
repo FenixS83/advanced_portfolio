@@ -75,7 +75,10 @@ nav a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 30vh;
+    align-items: flex-end;
     margin-top: 0;
+    text-align: right;
 }
 
 .hero-banner img {
@@ -315,9 +318,11 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        width: 100vw;
     }
     article  h2,
     article  object {
+        flex-direction: column;
         flex: 0 0 100%;
     }
 
