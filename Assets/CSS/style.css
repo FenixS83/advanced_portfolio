@@ -1,10 +1,13 @@
+/* Stylesheet for advanced_portfolio */
+
+
 * {
     box-sizing: border-box;
     text-decoration: none;
     color: var(--third);
 }
 
-
+/* primarily used colors */
 :root {
     --first: rgba(68, 88, 119, 1);
     --second: rgba(146, 204, 206, 1);
@@ -21,6 +24,8 @@ body {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, Sans-serif;
 }
 
+
+/* Top header with name and nav bar */
 header {
     display: flex;
     flex-direction: row;
@@ -67,6 +72,8 @@ nav a:hover {
     color: var(--primary);
 }
 
+
+/* Hero Banner area with photo and subtitle */
 .hero-banner {
     background-image: url("/advanced_portfolio/Assets/Images/wood_fence.jpeg");
     background-color: var(--first);
@@ -79,6 +86,7 @@ nav a:hover {
     align-items: flex-end;
     margin-top: 0;
     text-align: right;
+    flex: 0 0 50%;
 }
 
 .hero-banner img {
@@ -86,11 +94,12 @@ nav a:hover {
     right: 110px;
     top: 20px;
     height: 185px;
-    border-radius: 60px;
+    border-radius: 55px;
 }
 
 div h2 {
     position: absolute;
+    display: inline;
     right: 50px;
     bottom: 3px;
     color: var(--third);
@@ -102,16 +111,33 @@ div h2 {
     text-align: center;
 }
 
+
+/* Main contents of page */
 main {
-    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-grow: 1; */
+    max-width: 90%;
 }
 
+
+/* About me section */
+.me {
+    flex-grow: 0;
+    margin-bottom: 20px; 
+    height: 15vw;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+/* Article is being used for the "about me", "work" and "contact" fields */
 article {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
-    height: 100%;
+    /* height: 100%; */
     position: relative;
 }
 
@@ -135,18 +161,16 @@ article p {
     left: 22vw;
 }
 
-.me {
-    margin-bottom: 20px;
-    height: 12vw;
-}
 
+/* Object as well as the class ".cards" is being used to refer to the individual project cards */
 object {
     margin: 5px;;
 }
 
-
-.cards {
-    display: inline-flex;
+/* Class".container" is referring to the div that contains all of the project cards */
+.container {
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     position: absolute;
@@ -155,13 +179,18 @@ object {
     flex-direction: row;
     flex-wrap: wrap;
     padding-left: 30px;
+    flex: 0 0 78%;
+    min-height: 350px;
+    max-height: 350px;
+    flex-basis: 5px;
     
 }
 
-
-.surf {
+/* Class".horiseon" is referring to the card for the Horiseon project */
+.horiseon {
     float: right;
     width: 73vw;
+    min-width: 20vw;
     height: 30vw;
     position: absolute;
     border: 3px solid var(--second);
@@ -172,7 +201,7 @@ object {
     background-size: cover;
 }
    
-
+/* H3 and H4 are being used for the nametag for each project card */
 h3 { 
     position: absolute;
     bottom: 2px;
@@ -198,10 +227,12 @@ h4 {
     font-size: 14px;
 }
 
+/* Class".work" is referring to the specific section with the subheading "work" in it.  */
 .work {
     height: 53vw;
 }
 
+/* Class".snippet" is referring to the card for the Code Snippet project */
 .snippet {
     float: left;
     width: 36vw;
@@ -215,6 +246,7 @@ h4 {
     order: 1;
 }
  
+/* Class".landPage" is referring to the card for the Landing Page project */
 .landPage {
     float: right;
     width: 36vw;
@@ -229,6 +261,7 @@ h4 {
     order: 2;
 }
 
+/* Class".passgen" is referring to the card for the Password Generator project */
 .passgen {
     float: left;
     width: 36vw;
@@ -243,6 +276,7 @@ h4 {
     order: 3;
 }
 
+/* Class".firstweb" is referring to the card for My First Website project */
 .firstweb {
     float: right;
     width: 36vw;
@@ -257,7 +291,9 @@ h4 {
     order: 4;
 }
 
+/* Attributes for footer section */
 footer { 
+    display: flex;
     position: relative;
     flex-grow: 0;
     align-items: flex-end;
@@ -293,10 +329,12 @@ footer a:hover {
     color: var(--primary);
 }
 
-
+/* Media Queries for screen size of 980px */
 @media screen and (max-width: 980px) {
-
-
+    * {
+        flex-direction: column wrap;
+    }  
+    
     header {
         padding: 0 0 10px 0;
         justify-content: center;
@@ -343,27 +381,50 @@ footer a:hover {
         padding-left: 50px;
     }
 
-    .cards {
+    portal {
         flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        min-width: 767px;
+        flex: 0 4 100%;
+        max-height: 2vw;
+        min-height: 3vw;
     }
 }
 
-/* Max Width 768px */
-
+/* Media Queries for screen size of 768px */
 @media screen and (max-width: 768px) {
     * {
-        display: block;
         flex-direction: column wrap;
     }
 
 
-    object, object:first-child {
-        grid-column: 1/-1;
+    
+    main{
+        flex-direction: column;
     }
 
-    .cards {
-        flex-direction: wrap column;
-        grid-auto-rows: minmax (200px, 1fr);
+    
+    object, object:first-child {
+        flex-basis: 100%;
+    }
+
+    object{
+        min-height: 5vw;
+        min-width: 5vw;
+    }
+
+    
+
+    .container {
+        flex-direction: column;
+        flex-wrap: wrap ;
+        align-items: center;
+        /* grid-auto-rows: minmax (200px, 1fr); */
+        width: max-content;
+        max-height: 50px;
     }
 
     footer address {
