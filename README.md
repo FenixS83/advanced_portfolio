@@ -5,7 +5,7 @@
 2. Explanation of task
 3. Benefit of responsive layout
 4. Personal benefit of making a responsive website
-5. Screenshot of refactored website
+5. Screenshot of Advanced CSS Sample Portfolio
 6. Link to live website
 
 
@@ -25,10 +25,10 @@ Prior to this exercise I was unaware of what made a website adjust between diffe
 
 
 
-### Screenshot of refactored site
+### Screenshot of Advanced CSS Sample Portfolio
 ![The sample Portfolio includes a header with name and nav links, a hero banner with personal photo and subtitle. There are also sections with "about me" information as well as samples of previously completed projects. The bottom of the page has basic contact information.](./Assets/Images/css_portfolio_1.png)(./Assets/Images/css_portfolio_2.png )
 
 ### Link to live website
-https://fenixs83.github.io/code-refactor/
+https://fenixs83.github.io/advanced_portfolio/
 
 Thank you so much for checking out my project! If you have any suggestions on how to make it better, please feel free to submit a pull request. 
